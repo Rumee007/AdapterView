@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/stImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/movie"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:id="@+id/stName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/stImage"
+        tools:text="Mashrafee Bin Mortaza"
+        android:padding="7dp"/>
+    <TextView
+        android:id="@+id/stAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/stImage"
+        tools:text="32"
+        android:padding="7dp"
+        android:layout_below="@id/stName"/>
+
+</RelativeLayout>

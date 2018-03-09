@@ -7,7 +7,9 @@ import java.util.List;
  * Created by Mobile App on 2/9/2018.
  */
 
+// Country Class
 public final class CountryListGenerator {
+
     public static List<String> generateCountries(){
         List<String> countries = new ArrayList<>();
         countries.add("Australia");
@@ -28,26 +30,4 @@ public final class CountryListGenerator {
         countries.add("South Africa");
         return countries;
     }
-    public static class StudentListGenerator{
-        public static List<Student>generateStudents(){
-            List<Student>students = new ArrayList<>();
-            students.add(new Student("abc",20,R.drawable.movie));
-            students.add(new Student("abc",20,R.drawable.movie));
-            students.add(new Student("Abbas",20,R.drawable.movie));
-            students.add(new Student("abc",20,R.drawable.movie));
-            students.add(new Student("abc",22,R.drawable.movie));
-            students.add(new Student("abc",20,R.drawable.movie));
-            students.add(new Student("abc",20,R.drawable.movie));
-            students.add(new Student("Harun",20,R.drawable.movie));
-            students.add(new Student("abc",21,R.drawable.movie));
-            students.add(new Student("abc",20,R.drawable.movie));
-            students.add(new Student("Mashrafi",20,R.drawable.movie));
-            students.add(new Student("abc",40,R.drawable.movie));
-            students.add(new Student("abc",20,R.drawable.movie));
-            students.add(new Student("Sabbir",29,R.drawable.movie));
-            students.add(new Student("abc",20,R.drawable.movie));
-            return students;
-        }
-    }
-
 }

@@ -10,23 +10,24 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private ListView countryLV;
-    private StudentAdapter adapter;
+    private ListView countryListView;
+    private StudentAdapter studentAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        countryLV = findViewById(R.id.countryListView);
-        adapter = new StudentAdapter(this,CountryListGenerator.StudentListGenerator.generateStudents());
-        countryLV.setAdapter(adapter);
 
-        countryLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        countryListView = findViewById(R.id.countryListView);
+        studentAdapter = new StudentAdapter(this, Student.generateStudents());
+        countryListView.setAdapter(studentAdapter);
+
+        countryListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //Toast.makeText(MainActivity.this, CountryListGenerator.generateCountries().get(position), Toast.LENGTH_SHORT).show();
                 //String country = CountryListGenerator.generateCountries().get(position);
                 startActivity(new Intent(MainActivity.this,DetailsActivity.class)
-                .putExtra("pos",position));
+                .putExtra("position",position));
             }
         });
     }
